@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float menu</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000; text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{content: ""; display: block; clear: both;}
+		.nav{width: 1000px; /*background-color:skyblue;*/ margin: 0 auto;}
+		.nav ul{}
+		.nav li{float: left; width: 20%; background-color:green;}
+		.nav a{display: block; text-align: center; line-height: 40px;}
+		/*.nav li:hover{background-color: pink;}*/
+		/*.nav li:hover a{color:white;}*/ /*링크시바뀜*/ /*방법1*/
+		.nav a:hover{background-color:pink; color: white;} /*방법2*/
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav class="nav">
+			<!-- ul>li*5>a[href="#"]>{menu$} -->
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+
+		<div style="background-color:#ccc;">test</div>
+	</header>	
+</body>
+</html>

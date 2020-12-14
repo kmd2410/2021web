@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0; box-sizing:border-box;}
+		a:link,a:visited{color: #000; text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{content:""; display: block; clear: both;}
+		/*---------------------------------------------------------*/
+		.nav{width: 500px; background: skyblue; margin: 0 auto; border:1px solid black;}
+		.nav li{border:1px solid black;float: left; width: 99.5px; background:orange; text-align: center; line-height: 50px; }
+		.nav p{text-align: center; margin: 0px;}
+		.slider{background-color: green; text-align: center; line-height: 50px;}
+		.aside {width: 700px;margin: 0 auto; background-color: red;}
+		.aside div{border:1px solid black;width:80px; text-align:center; background: yellow; line-height: 150px;}
+		.footer{background-color: brown; height: 100px; text-align: center; line-height: 100px}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<p>
+			logo
+			<ul class=clearfix>
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				<li>menu5</li>
+			</ul>
+		</p>
+	</div>
+	<p>　</p>
+	<p class="slider">visual<br>slider</p>
+	<p>　</p>
+	<div class="aside clearfix">
+		<div style="float:left; width: 300px; " >aside</div>
+		<div style="float:right; width: 400px; ">content</div>
+	</div>
+	<p>　</p>
+	<p class="footer">footer</p>
+</body>
+</html>

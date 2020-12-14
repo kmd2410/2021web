@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000; text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{content:"" ;display:block; clear: both;} /*방법3*/
+		.box{width: 500px; background:skyblue; margin: 0 auto;}
+		.box1{float: left; background-color:orange; width: 100px; height: 50px; 
+				line-height: 50px;}
+		.box2{float: right; background-color:green; width: 100px; height: 50px;
+			text-align:  right; line-height: 50px;}
+		/*.clear{clear:both;}*/ /*방법1*/
+		/*.box:after{content:""; display: block; clear:both;} 방법2*/
+
+
+	</style>
+</head>
+<body>
+	<div class="box clearfix"> <!-- 방법3 -->
+		<div class="box1">left</div>
+		<div class="box2">right</div>
+		<!-- <div class="clear"></div> --> <!-- 방법1 -->
+
+	</div>
+	Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Ea facilis quo quis, eum, qui ab itaque vero nostrum laboriosam praesentium voluptatem sint aliquid eius veniam at accusamus pariatur ut, laudantium.
+
+</body>
+</html>
