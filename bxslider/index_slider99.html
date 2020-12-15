@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>slider tap</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				controls:false,
+				pagerCustom:".sliderTap",
+				mode:"vertical"
+			});
+		});
+	</script>
+	<style>
+		.bx-wrapper{
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border: 0 none;
+			background: #fff;
+			margin-bottom: 0;
+		}
+		.sliderWrap{width: 1260px; height: 740px; margin: 0 auto; position: relative;}
+		.txtWrap{position: absolute;top: 200px; right: 100px; width: 400px;}
+		.txtWrap h2{font-size: 70px;}
+		.txtWrap h2:after{content:"";display: block;width: 210px;height: 3px;background: #000; margin-bottom: 30px;}
+		.txtWrap a{width: 200px; height: 40px; display: block;
+		text-align: center; line-height: 40px; border: 1px solid #000;
+		border-radius: 100px}
+		.txtWrap p{margin-bottom: 30px;}
+		.menuWrap{position: absolute; top: 0; width: 100%; height: 100%;}
+		.menuWrap a{display: block; width: 10%; height: 20%; background: #7FFFD4;
+			text-align: center; line-height: 150px;}
+		.menuWrap a:hover{background: #FAEBD7;}
+		.menuWrap a.active{background: #008B8B;}
+
+	</style>
+</head>
+<body>
+	<div class="sliderWrap">
+		<ul class="slider">
+			<li>
+				<img src="images/main_slider01.jpg" alt="photo">
+				<div class="txtWrap">
+					<h2>Lorem</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, praesentium. </p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+			<li>
+				<img src="images/main_slider01.jpg" alt="photo">
+				<div class="txtWrap">
+					<h2>lorem</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, voluptates.</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+			<li>
+				<img src="images/main_slider01.jpg" alt="photo">
+				<div class="txtWrap">
+					<h2>lorem</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nisi. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Pariatur, sed?</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+			<li>
+				<img src="images/main_slider01.jpg" alt="photo">
+				<div class="txtWrap">
+					<h2>lorem</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nisi. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Labore, ullam!</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+			<li>
+				<img src="images/main_slider01.jpg" alt="photo">
+				<div class="txtWrap">
+					<h2>lorem</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, dicta?</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+		</ul>
+		<div class="menuWrap">
+			<a href="#" data-slide-index="0">메뉴1</a>
+			<a href="#" data-slide-index="1">메뉴2</a>
+			<a href="#" data-slide-index="2">메뉴3</a>
+			<a href="#" data-slide-index="3">메뉴4</a>
+			<a href="#" data-slide-index="4">메뉴5</a>
+		</div>
+	</div>
+</body>
+</html>
