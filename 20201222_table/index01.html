@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		h2{text-align: center; margin-bottom: 10px;}
+		td{border: 1px solid #000; text-align: center;}
+		span{color: #f00;}
+		.table01 td,.table02 td{height: 40px;}
+		.table03 ul{float: left; text-align: left;}
+		.table03 ul:nth-child(2){margin-left: 80px;}
+		.table03 ul:nth-child(3){margin-left: 80px;}
+		.table03 td:nth-child(3){padding: 10px 20px;}
+		.table03 td{border-top: 0 none;}
+		.box{border: 2px solid #000; margin: 0 auto; width: 900px;}
+
+		.mb05{margin-bottom: 5px;}
+		.mb10{margin-bottom: 10px;}
+		.bgc{background: #ccc;}
+
+
+	</style>
+</head>
+<body>
+	<h2>입학지원서(일반고)</h2>
+	<div class=box>	
+		
+		<table class="table01 mb05">
+			<colgroup>
+				<col width="50">
+				<col width="150">
+				<col width="200">
+				<col width="150">
+				<col width="200">
+				<col width="150">
+			</colgroup>
+			<tr>
+				<td rowspan="4"><span>*</span><br>인적<br>사항</td>
+				<td class="bgc">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</td>
+				<td>한태희</td>
+				<td class="bgc">학&nbsp;&nbsp;교&nbsp;&nbsp;명</td>
+				<td>oo고등학교</td>
+				<td rowspan="4">사진첨부</td>
+			</tr>
+			<tr>			
+				<td class="bgc">주민등록번호</td>
+				<td></td>
+				<td class="bgc">e - mail</td>
+				<td></td>			
+			</tr>
+			<tr>
+				<td class="bgc">휴 대 폰(C.P)</td>
+				<td></td>
+				<td class="bgc">긴급연락처<br>(학부모)</td>
+				<td></td>			
+			</tr>
+			<tr>
+				<td class="bgc">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</td>
+				<td colspan="3"></td>
+			</tr>	
+		</table>
+		
+		<table class="table02">
+			<colgroup>
+				<col width="150">
+				<col width="150">
+				<col width="150">
+				<col width="150">
+				<col width="150">
+				<col width="150">
+			</colgroup>
+			<tr>
+				<td class="bgc"><span>*</span>추천교사명</td>
+				<td></td>
+				<td class="bgc">연락처</td>
+				<td></td>
+				<td class="bgc">학교연락처</td>
+				<td></td>
+			</tr>
+		</table>
+		<table class="table03 clearfix">
+			<colgroup>
+				<col width="50">
+				<col width="200">
+				<col width="650">
+			<tr>
+				<td><span>*</span>인지<br>경로</td>
+				<td>본교를 알게된 경로는<br>(중복응답가능)</td>
+				<td>
+					<ul>
+						<li><input type="checkbox"> 홈페이지검색</li>
+						<li><input type="checkbox"> 지인소개</li>
+						<li><input type="checkbox"> 지하철광고</li>
+						<li><input type="checkbox"> 고용지원센터소개</li>
+					</ul>
+					<ul>
+						<li><input type="checkbox"> 인터넷검색</li>
+						<li><input type="checkbox"> 모바일검색</li>
+						<li><input type="checkbox"> 포스터</li>
+						<li><input type="checkbox"> 기타</li>
+					</ul>
+					<ul>
+						<li><input type="checkbox"> 진로담당</li>
+						<li><input type="checkbox"> 간판</li>
+						<li><input type="checkbox"> HRD_NET</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
