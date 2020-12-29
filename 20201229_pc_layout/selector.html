@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>selector</title>
+	<style>
+		div{background: skyblue; border: 1px solid #000; margin-bottom: 5px;}
+		/*div.box + div.box{background: red;}*/ /*본인포함 다음대상 다음부터적용*/
+		div.box ~ div.box{background: blue;} /*본인 제외 다음대상 전부 적용 형제선택자일때 사용*/
+	</style>
+</head>
+<body>
+	<div class="box">Lorem.</div>
+	<div class="box">Illo?</div>
+	<div class="box">Incidunt.</div>
+	<div class="box">Culpa!</div>
+	<div class="box">Obcaecati.</div>
+	<div class="box">Autem.</div>
+	<div class="box">Omnis.</div>
+	<div class="box">Fuga!</div>
+	<div class="box">Eaque!</div>
+	<div class="box">Sapiente.</div>
+</body>
+</html>

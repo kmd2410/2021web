@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<style>
+		.container {padding: 40px 0; min-width: 1200px;}
+		.container h3{text-align: center;}
+		.container h3:after{content: ""; display: block;width: 200px; height: 1px; background: #000;
+		margin: 5px auto;}
+		.container p{text-align: center; margin-bottom: 20px;}
+		.contents{width: 1200px; margin: 0 auto; background: skyblue;}
+		.contents ul{}
+		.contents ul li{float: left; width: 288.75px;height: 288.75px;margin-right: 15px;
+			position: relative; cursor: pointer;}
+		.contents ul li:last-child{margin-right: 0;}
+		.contents ul li:hover .overlay{opacity: 1;}
+		.contents .imgView{width: 100%; display: block;}
+		.contents .overlay{width: 100%;height: 100%; background: rgba(255,0,0,0.2);
+			position: absolute; top: 0; left: 0;opacity: 0; transition: 0.3s;}
+		.contents .overlay .txt{width: 150px;height: 150px;background: #f00;
+			color: white; text-align: center; line-height: 150px;
+			position: absolute;left: 50%;top: 50%; transform: translate(-50%,-50%);
+			border-radius: 10px;}
+
+		.container.pink{background-image: url(../images/pc01.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			background-attachment: fixed;}
+		.container.skyblue{background: skyblue;}
+	</style>
+</head>
+<body>
+	<div style="height: 1000px;"></div>
+	<div class="container wow bounce">
+		<h3 class="wow fadeInLeft" date-wow-delay="0.5s">GALLERY</h3>
+		<p class="wow fadeInRight" date-wow-delay="0.6s">Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Unde, libero.</p>
+		<div class="contents">
+			<ul class="clearfix">
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.7s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.9s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="1.1s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="container pink wow fadeIn">
+		<h3>GALLERY</h3>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Unde, libero.</p>
+		<div class="contents">
+			<ul class="clearfix">
+				<li class="wow fadeInLeft" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow fadeInLeft" data-wow-delay="0.7s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow fadeInLeft" data-wow-delay="0.9s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow fadeInLeft" data-wow-delay="1.1s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="container skyblue">
+		<h3>GALLERY</h3>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Unde, libero.</p>
+		<div class="contents">
+			<ul class="clearfix">
+				<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1.0s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1.2s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1.4s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li>
+				<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1.6s">
+					<img src="../images/testimg.jpg" alt="" class="imgView">
+					<div class="overlay">
+						<div class="txt">Lorem, ipsum.</div>
+					</div>
+				</li >
+
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
