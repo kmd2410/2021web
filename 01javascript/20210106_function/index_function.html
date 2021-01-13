@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function func(){} //함수
+
+		var func = function(){} //무명함수
+
+		(function(){})(); //즉시실행함수
+
+		$(document).ready(function(){})
+
+		var str = "han";
+		var str = new String("han");
+		var arr = new Array(); //개체 생성시 new 써야함
+		var arr = []; //배열 선언
+		arr[0] = "서울"; 
+		arr[1] = "부산"; //배열 넣기
+		.join()//모든 배열개체에 문자 추가
+		.concat()//배열 개체 추가
+		.reverse()//순서 전환
+		.sort()//순서 정렬
+		.slice()//선택출력
+		.pop()//제거
+		.push()//추가
+		.forEach()//데이터를 반복문 사용할때 사용?
+
+		let achu = 10; //전역 변수
+		function(){
+			let achu = 20; //지역 변수 (함수 블록밖에서 사용불가)
+		}
+
+		var arr = [1,2,3,4,5]
+		arr.length // 4 이건 내장객체
+
+		var obj = {
+			name:"sonata", //속성
+			color:"blue", //속성
+			start:function(){} //함수는 메소드
+		}; // 사용자정의 객체 내가만든거
+		obj.name; // sonate 객체가져오는법
+		obj.start() //소괄호로 무명함수 불러옴 매소드 
+		obj["name"] // 이렇게 가져와도됨
+
+	</script>
+</body>
+</html>

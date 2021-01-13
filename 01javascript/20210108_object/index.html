@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Object</title>
+</head>
+<body>
+	<div id="year"></div>
+	<script>
+		var today = new Date(); //객체 생성할때는 new 입력
+		console.log(today.getFullYear());
+		document.getElementById("year").innerHTML = today.getFullYear();
+		document.getElementById("year").innerHTML = today;
+		// $("#year").html(today.getFullYear());
+
+		var str = new String("한성용");
+		document.write(str);
+		console.log(str);
+	</script>
+</body>
+</html>

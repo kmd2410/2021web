@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>event</title>
+</head>
+<body onload="init()">
+	<!-- 방법1 -->
+	<p onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'">마우스 오버</p>
+	<!-- 방법2 프로퍼티-->
+	<p id="p">마우스 오버</p>
+	<script>
+		function init(){
+			// 방법2 프로퍼티
+			var p = document.getElementById("p")
+			p.onmouseover = over;
+			p.onmouseout = out;
+		}
+		// p.onmouseover = function(){} //무명함수 위에랑 같음
+		// 괄호있으면 메소드 없으면 프로퍼티
+		function over(){
+			p.style.backgroundColor = "red";
+		}
+		function out(){
+			p.style.backgroundColor = "white";
+		}
+	</script>
+	
+
+	<div class="box">마우스 오버</div>
+	<script>
+		// 방법3 메소드
+		var box = document.getElementsByClassName("box");
+		box[0].addEventListener("mouseover",bover);
+		box[0].addEventListener("mouseout",bout);
+
+		function bover(){box[0].style.backgroundColor = "blue"}
+		function bout(){box[0].style.backgroundColor = "white"}
+	</script>
+	
+	
+	<div class="box1">프로퍼티로 이벤트 무명함수등록</div>
+	<script>
+		var box1 = document.getElementsByClassName("box1");
+		box1[0].onmouseover = function(){box1[0].style.fontSize = "2em";}
+		box1[0].onmouseout = function(){box1[0].stlye.fontSize = "1em";}
+	</script>
+	
+	
+	<div class="box2">이벤트 메소드를 활용한 무명함수등록</div>
+	<script>
+		var box2 = document.getElementsByClassName("box2");
+		box2[0].addEventListener("mouseover",function(){});
+		box2[0].addEventListener("mouserout",function(){});
+	</script>
+
+	
+	<script>
+		//제이쿼리 작성법
+		//$(".box2").mouseover(function(){});
+		//$(".box2").on("mouserover",function(){});
+		//$(document).ready(function(){});문서로드
+		//window.onload = function(){};제이쿼리 문서로드
+	</script>
+
+	<div class="box3">버튼클릭하면 이벤트객체를 출력합니다.</div>
+	<button onclick="fun(event)">클릭</button>
+
+	<script>
+		function fun(event){
+			console.log(event.type);
+			var txt = "type: " + event.type + "<br>";
+			txt += "target: " + event.target +"<br>";
+
+			var box3 = document.getElementsByClassName("box3")[0]
+			box3.innerHTML = txt;
+
+			event.preventDefault();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for</title>
+</head>
+<body>
+	<script>
+		let st = ["서울","제주도","대구","부산","울산","경기"]
+		console.log("배열개수:" + st.length);
+
+		for(let i=0;i<6;i++){
+			document.write(st[i]+ "<br>");
+		}
+
+		let img = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg"];
+		let txt = ["앵무새","장미","거위","바이킹"];
+		console.log("이미지개수"+img.length);
+		document.write("<ul class=\"nav clearfix\">");
+		for(let i=0;i<img.length;i++){
+			document.write("<li>")
+			document.write("<img src='../images/"+img[i]+"'>"); // 역슬러쉬""사용으로 중첩사용가능
+			document.write("<p>"+txt[i]+"</p>");
+			document.write("</li");
+		}
+		document.write("</ul>"); //1차원배열사용하였음 ==
+
+	</script>
+</body>
+</html>

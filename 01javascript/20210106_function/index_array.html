@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="han"></div>
+	<script>
+		let num = new Number(1); //개체쓸때는 new써야함
+		var str = new String("한");
+		let city = ["seoul","busan","ulsan","incheon"];//new Array(); 배열로지정
+
+		function printArr(){
+			var txt = "";
+			for(var i=0;i<city.length;i++){
+				//document.write(i)
+				//document.write("배열데이터 [" +i +"] = "+ city[i]+"<br>");
+				txt += "배열데이터 [" +i +"] = "+ city[i]+"<br>";
+				
+
+
+			}
+			document.getElementById("han").innerHTML = txt;
+		}
+		//printArr();
+
+	</script>
+	<div onclick="printArr()">데이터출력</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="change()">클릭</button>
+	<button onclick="init()">복구</button>
+	<p>
+		Lorem ipsum <span>dolor</span>, sit, amet consectetur adipisicing elit.<span> Non</span> iure, veritatis fugiat <span>quis</span> ab in consequuntur voluptatum eaque mollitia <span>aspernatur</span> sequi sed, ut. Quas deserunt ex reprehenderit <span>rem</span> sit omnis.
+	</p>
+	<script>
+		function change(){
+			let sp = document.getElementsByTagName("span");
+			//sp[0].style.color = "red"
+			for(i=0;i<sp.length;i++){
+				sp[i].style.color="orchid";
+				sp[i].style.fontWeight="bold";
+			}
+		}
+		function init(){
+			let sp = document.getElementsByTagName("span");
+			for(i=0;i<sp.length;i++){
+				sp[i].style.color = "initial"; //초기값
+				sp[i].style.fontWeight = "initial";
+			}
+		}
+	</script>
+	<style>
+		.boxWrap{color: red;}
+		.box{color: initial;}
+	</style>
+	<div class="boxWrap">
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Recusandae, qui.</p>
+		<div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, quaerat.</div>
+	</div>
+</body>
+</html>

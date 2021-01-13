@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Object</title>
+</head>
+<body>
+	<p id="name"></p>
+	<p id="speedup"></p>
+	<p id="speeddown"></p>
+	<p id="speedPlus"></p>
+	<p id="speedName"></p>
+
+	<p>자동차이름: <span class="name"></span></p>
+	<p>자동차이름1: <span class="name"></span></p>
+	<script>
+		//Javascript 온로드,Jquery 레디
+		var car = ["소나타",100,"white"]; //방법1
+		var car1 = new Array("소나타",100,"white"); //방법2
+		
+		car.join() //배열 다보기
+		car.length //배열 갯수
+		car.concat(car1) //배열 두개 합치기
+
+		//Object !!function 사용가능
+		var car2 = {
+			name:"VOLT",
+			speed:200,
+			color:"red",
+			start:function(){
+				return this.speed+200; //불러오기 car2.start()
+			},
+			speedup:function(){
+				return this.speed+10;
+			},
+			speeddown:function(){
+				return this.speed-10;
+			},
+			speedPlus:function(s){
+				return this.speed + s;
+			},
+			speedName:function(s,name){
+				return this.speed + s + name;
+			}
+		};
+		document.getElementById("name").innerHTML = car2.name;
+		//$("#name").html(car2.name);
+		document.getElementById("speedup").innerHTML = car2.speedup();
+		document.getElementById("speeddown").innerHTML = car2.speeddown();
+		document.getElementById("speedPlus").innerHTML = car2.speedPlus(20);
+		document.getElementById("speedName").innerHTML = car2.speedName(100,"sonata");
+		
+		document.getElementsByClassName("name")[0].innerHTML = car2.name;
+		document.getElementsByClassName("name")[1].innerHTML = car2.name;
+		
+		document.getElementsByTagName("p")[0].innerHTML = car2.name;
+
+	</script>
+</body>
+</html>
