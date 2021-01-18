@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>event</title>
+	<script>
+		//인라인 이벤트 모델 : HTML 요소 안에 직접 입력
+		//<p onclick="console.log('ok');"></p>
+		//기본 이벤트 모델 : HTML 요소 get하고 객체의 메서드 x.method = function(){}로 연결
+		//var bt = document.getElementById("bt"); //요소 취득
+		//표준 이벤트 모델
+		//객체.addEventListener(e,function)
+	</script>
+	<style>
+		body,html{height: 100%;}
+	</style>
+</head>
+
+<body>
+	<script>
+		// var han = document.getElementById("han");
+		// han.innerHTML = "반갑습니다"
+		// 함수를 만들때는 위에 올려놔도 됨
+		function calculate(){
+			var exp = document.getElementById("exp");
+			var result = document.getElementById("result");
+			document.write(eval(exp.value));
+			result.value = eval(exp.value);
+			//eval 매소드를 넣으면 계산식 사용가능
+			//전역함수 강력한친구라 사용권장치않음
+			//parselnt() = 문자를 숫자로 바꿔줌 ex)"10" -> 10
+		}
+
+	</script>
+
+	<h3 id="han">안녕하세요</h3>
+
+	<form>
+		<label for="exp">식 :</label>
+		<!-- label for값과 input id값을 연결 -->
+		<input type="text" id="exp" value="" name="cal">
+		<!-- name이라는 그릇에 value 이름으로 전송 -->
+		<input type="text" id="result">
+		<input type="button" value="계산" onclick="calculate()">
+	</form>
+	<div id="txt">홍길동</div>
+	<img src="../images/testimg.jpg" alt="">
+	<script>
+		//var allBody = document.getElementsByTagName("body")[0]
+		//allBody.onwheel = function(){};
+		var width = 1
+		document.body.onwheel = function(e){
+			console.log(e.wheelDelta);
+			if(e.wheelDelta<0){
+				width--; // width = width - 1
+				if(width<0){
+					width=0;
+				}
+			}else{width++
+				if(width>20){width=20;}}
+			console.log(width);
+			document.getElementById("txt").style.fontSize = width + "em";
+			document.getElementsByTagName("img")[0].style.width = (width*100) + "px";
+		};
+
+	</script> 
+</body>
+</html>

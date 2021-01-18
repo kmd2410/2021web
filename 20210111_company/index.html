@@ -12,6 +12,24 @@
 	<script>
 		$(document).ready(function(){
 			$(".slider").bxSlider();
+			$(".slider1st").bxSlider({
+				controls:false,
+				pager:false
+			});
+			$(".toggleMenu").click(function(){
+				let toggle = $(".toggleMenu").attr("class");
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300)
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300);
+				}
+			});
+			$(window).resize(function(){
+				$(".toggleMenu").removeClass("change");
+				$("#main_menu").removeAttr("style");
+			});
 		});
 	</script>
 </head>
@@ -64,8 +82,35 @@
 						<p>뉴스레터신청</p>
 					</a>
 				</li>
-				<li class="ct2st">2</li>
-				<li class="ct3st">3</li>
+				<li class="ct2st">
+					<a href="#">
+						<img src="images/img01_01.jpg" alt="영상" class="bgImg">
+						<img src="images/icon01_06.png" alt="실행" class="play">
+					</a>
+				</li>
+				<li class="ct3st">
+					<div class="sliderWrap">
+						<ul class="slider1st">
+							<li class="news clearfix">
+								<div class="left">Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Fugit, repellendus.</div>
+								<div class="right">
+									<img src="images/img01_02.jpg" alt="">
+								</div>
+							</li>
+							<li class="news clearfix">
+								<div class="left">Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Fugit, repellendus.</div>
+								<div class="right">
+									<img src="images/img01_02.jpg" alt="">
+								</div>
+							</li>
+						</ul>
+						<h2>뉴스</h2>
+						<div class="btn clearfix">
+							<img src="images/btn01_01.jpg" alt="prevBtn">
+							<img src="images/btn01_02.jpg" alt="nextBtn">
+						</div>
+					</div>
+				</li>
 				<li class="ct4st">
 					<a href="#">
 						<img src="images/icon01_01.png" alt="뉴스레터신청하기">
@@ -78,9 +123,27 @@
 						<p>뉴스레터신청</p>
 					</a>
 				</li>
-				<li class="ct6st">6</li>
-				<li class="ct7st">7</li>
-				<li class="ct8st">8</li>
+				<li class="ct6st">
+					<img src="images/img01_03.jpg" alt="빛과에너지">
+					<div class="txt">
+						<h3>전력 및 에너지 플렌트</h3>
+						<p>세상을 밝히는<br>빛과 에너지</p>
+					</div>
+				</li>
+				<li class="ct7st">
+					<img src="images/img01_06.jpg" alt="빛과에너지">
+					<div class="txt">
+						<h3>전력 및 에너지 플렌트</h3>
+						<p>세상을 밝히는<br>빛과 에너지</p>
+					</div>
+				</li>
+				<li class="ct8st">
+					<img src="images/img01_03.jpg" alt="빛과에너지">
+					<div class="txt">
+						<h3>전력 및 에너지 플렌트</h3>
+						<p>세상을 밝히는<br>빛과 에너지</p>
+					</div>
+				</li>
 				<li class="ct9st">
 					<a href="#">
 						<img src="images/icon01_01.png" alt="뉴스레터신청하기">
@@ -93,9 +156,59 @@
 						<p>뉴스레터신청</p>
 					</a>
 				</li>
-				<li class="ct11st"></li>
+				<li class="ct11st">
+					<img src="images/img01_03.jpg" alt="빛과에너지">
+					<div class="txt">
+						<h3>전력 및 에너지 플렌트</h3>
+						<p>세상을 밝히는<br>빛과 에너지</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</header>
+	<div class="container">
+		<div class="section">
+			<h4>비전</h4>
+			<p>VISION 2021</p>
+			<ul class="clearfix">
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_01.png" alt="">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_02.png" alt="">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_03.png" alt="">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_04.png" alt="">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

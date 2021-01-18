@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jquery</title>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.box{display: block;}
+	</style>
+	<script>
+		//window.onload = function(){
+			//document.getElementsByClassName("box")[0].style.display = "none";
+		//}; //dom 위에서 사용하고싶으면 온로드 사용해야함
+
+		$(document).ready(function(){
+			//$(".box").hide();
+			$(".btnshow").hide();
+			$(".btn").click(function(){
+				$(".box").fadeOut();
+				$(this).hide();
+				$(".btnshow").show();
+			});
+			$(".btnshow").click(function(){
+				$(".btn").fadeIn();
+				$(".box").show();
+				$(this).hide();
+			});
+		});
+	</script>
+</head>
+<body>
+	<button class="btn">클릭</button>
+	<button class="btnshow">나타나기</button>
+	<div class="box">안녕</div>
+	<script>
+		//$(".box").hide();
+		//document.getElementsByClassName("box")[0].style.display = "none";
+	</script>
+</body>
+</html>

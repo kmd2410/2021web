@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mousemove</title>
+	<script>
+		window.onload = function(){
+			document.getElementById("div").innerHTML = "홍길동";
+		}
+		//onload 문제점 : 마지막사용한 onload만 실행. =이거랑 같은게 제이쿼리에서 ready function
+		$(document).ready(function){
+			$("#div").html("한태희");
+		}
+		//제이쿼리 위에꺼랑 같음
+	</script>
+</head>
+<body onload="han()">
+	<img src="../images/testimg.jpg" onmousemove="where(event)">
+	<div id="div"></div>
+	<script>
+		function where(e){
+			var txt = "버튼 = " + e.button + "<br>";
+			txt += "이미지안좌표 offset = X:" + e.offsetX +", Y:"+e.offsetY+"<br>";
+			document.getElementById("div").innerHTML = txt;
+		}
+	</script>
+	
+</body>
+</html>

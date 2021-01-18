@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>event</title>
+	<style>
+		html,body{height: 100%;}
+		*{margin: 0; padding: 0;}
+	</style>
+</head>
+<body>
+	<h2 onclick="mouse(event)">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Qui, tempora?</h2>
+	<h2 onclick="offm(event)" style="border: 1px solid #000; width: 300px; height: 400px; margin-left: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Eos magnam, illum modi laudantium excepturi fugiat, illo, possimus culpa iste debitis aliquam amet molestias minus quas sed velit tenetur soluta iure!</h2>
+	<p id="event"></p>
+	<script>
+		function mouse(e){
+			let x = e.clientX; //document 내 의 마우스좌표
+			let y = e.clientY;
+			console.log("X 값 : " + x + ",Y값 : " + y);
+			let print = "X 값 : " + x + ",Y값 : " + y;
+			document.getElementById("event").innerHTML = print
+		}
+		function offm(e){//이벤트 실행 = 인자 e
+			let x = e.offsetX; //해당개체안에서의 값
+			let y = e.offsetY;
+			let print = "X offset값 : " + x + ",Y offset값 : " + y;
+			document.getElementById("event").innerHTML = print
+		}
+	</script>
+</body>
+</html>
