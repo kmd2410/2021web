@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			//$("p").hide();
+			//$("p").css("display","none");
+			$("p").css("background","red"); //set
+			let pTag = $("p").css("background"); //get
+			console.log(pTag);
+			console.log("p태그의 개수 :" + $("p").length);
+			$("p").eq(1).css("background","skyblue");
+			$("p").eq(3).css("background","blue").css("color","white").css("font-size",30);
+		});
+	</script>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Voluptas, aliquam. Optio expedita, vero numquam quas a inventore error iste at maxime quis repellat totam, laboriosam ipsum, iusto quos ad temporibus.</p>
+	<p>Sint aliquam, laudantium! Enim debitis natus laboriosam incidunt nostrum deleniti modi repellendus quam, minus odio sapiente at accusamus nihil, tenetur numquam vel consequuntur, quia et. Voluptas accusamus quidem sint quos?</p>
+	<p>Suscipit molestiae dolore fugit! Mollitia quos quibusdam neque adipisci ex consequatur culpa omnis, excepturi ratione eaque cum commodi cupiditate! Nobis quaerat facere fugiat illo culpa id unde perspiciatis praesentium veniam.</p>
+	<p>Dicta harum magnam dolore quisquam voluptas illum asperiores earum ullam inventore at quas, quos, dolorum, perferendis. At voluptate eius non rem unde incidunt iure. Pariatur nostrum in voluptate quis, nihil.</p>
+
+	<style>
+		.tab {width: 300px;}
+		.tab li{float: left; width: 100px; text-align: center; line-height: 30px;}
+		div{width: 300px; padding: 10px; border: 1px solid #000;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			//$(".box2,.box3").hide();
+			$("ul>li").eq(0).click(function(){
+				$(".box1").fadeIn();
+				$(".box2").hide();
+				$(".box3").hide();
+			});
+			$("ul>li").eq(1).click(function(){
+				$(".box1").hide();
+				$(".box2").fadeIn();
+				$(".box3").hide();
+			});
+			$("ul>li").eq(2).click(function(){
+				$(".box1").hide();
+				$(".box2").hide();
+				$(".box3").fadeIn();
+			});
+		});
+	</script>
+
+	<ul class="tab clearfix">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+	</ul>
+	<div class="box1">1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, necessitatibus.</div>
+	<div class="box2">2 Deserunt ea alias cupiditate ex porro, sit asperiores rerum ab?</div>
+	<div class="box3">3 Quisquam blanditiis sapiente deleniti iste quo culpa esse sequi totam.</div>
+</body>
+</html>
