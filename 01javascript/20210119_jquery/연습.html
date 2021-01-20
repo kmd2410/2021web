@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+		.tabWrap{width: 1000px; margin: 0 auto;}
+		.tab li{float: left; width: 200px; text-align: center; line-height: 40px; cursor: pointer;}
+		.tab li.active{background: skyblue;}
+		.boxWrap div{border: 1px solid #000; padding: 20px; display: none;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".tabWrap ul li").click(function(){
+                let num = $(this).index();
+                $(".tabWrap ul li").removeClass(); 
+                $(this).addClass("active");
+                $(".boxWrap div").hide();
+                $(".boxWrap div").eq(num).fadeIn();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="tabWrap">
+		<ul class="tab claerfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="boxWrap">
+			<div>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis doloremque nulla unde totam consequatur veritatis voluptates ullam repellat ducimus molestiae aut, exercitationem corporis labore aperiam iure quasi nam blanditiis earum.</div>
+			<div>2 Ratione nisi sit dolorum est consectetur autem quaerat asperiores, dignissimos quibusdam architecto minima facere, alias soluta harum, ex iure vel! Fugiat laborum repellat voluptatum laudantium perferendis eos numquam nostrum libero!</div>
+			<div>3 Esse sed, numquam veniam temporibus cum, odio! Dicta, nulla saepe, vitae eligendi molestiae sint eum ullam, ab doloremque quaerat sunt dolorem velit iure corrupti explicabo neque consequatur sit in inventore.</div>
+			<div>4 Qui aperiam ut facilis fugit repudiandae delectus laudantium voluptatem sapiente, hic libero ipsa nihil quibusdam totam aut temporibus tempora, impedit dignissimos ducimus, itaque. Recusandae blanditiis, dolores sed mollitia rerum, alias!</div>
+			<div>5 Eligendi facere atque eius cum magnam rem nobis debitis dolore adipisci porro eum culpa explicabo quasi aspernatur non consequatur laboriosam doloremque, ex tenetur sint libero optio. Tenetur, tempore aperiam assumenda!</div>
+		</div>
+	</div>
+</body>
+</html>
