@@ -10,6 +10,7 @@
         #panel{width: 600px; height: 300px; border: 1px solid #000; margin: 0 auto; position: relative;}
         .bar{width: 500px;height: 20px; background: red; position: absolute; left: 50px; top: 190px;}
         .car{position: absolute;left: 50px; top: 120px;}
+        .rotate{transform: rotateY(180deg);}
     </style>
     <script>
         $(function(){
@@ -19,6 +20,7 @@
             let nEnd = nStart+bar.width() -car.width(); //car end
             let nCurrent = nStart; //car current place
             let nStep = 2;
+            let nTimerId = 0;
 
             function carMove(){
                 nCurrent += nStep;
@@ -30,15 +32,27 @@
                 
                 if(nCurrent > nEnd){
                     nStep = -2;
+                    $(".car").addClass("rotate")
                 };
                 if(nCurrent < nStart){
                     nStep = 2;
+                    $(".car").removeClass("rotate")
                 };
                 car.css("left",nCurrent);
                 
             };
 
-            setInterval(carMove,30); //1000 = 1s
+            //setInterval(carMove,30); //1000 = 1s
+            $(".btn_start").click(function(){
+                if(nTimerId == 0){
+                nTimerId = setInterval(carMove,30); //have stack
+                }
+                console.log(nTimerId);
+            });
+            $(".btn_stop").click(function(){
+                clearInterval(nTimerId); //clear interval
+                nTimerId = 0
+            });
         });
     </script>
 </head>
@@ -48,5 +62,6 @@
         <div class="car"><img src="../images/car.png" alt=""></div>
     </div>
     <button class="btn_start">시작</button>
+    <button class="btn_stop">정지</button>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../../js/jquery.mousewheel.min.js"></script>
+    <style>
+        nav.menu{width: 100%; margin: 0 auto; background: skyblue;}
+        nav.menu.fixed{position: fixed;}
+        nav.menu ul{width: 1000px; margin: 0 auto;}
+        nav.menu li{float: left; width: 20%;}
+        nav.menu li a{display: block; line-height: 40px; text-align: center;}
+        .content{height: 3000px;}
+    </style>
+    <script>
+        $(function(){
+            $(document).mousewheel(function(event,delta){
+                console.log(delta);
+                $(window).scroll(function(){
+                    let scrollY = $(window).scrollTop();
+                    if(scrollY > 200){
+                        if(delta>0){
+                        $(".menu").addClass("fixed");}
+                        else{$(".menu").removeClass("fixed")}
+                    }else{
+                        $(".menu").removeClass("fixed");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="menu">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ut totam soluta veniam odit illum tenetur facilis cum. Iure rerum ea recusandae at explicabo, sapiente similique nulla quas, est itaque deserunt ullam! Natus necessitatibus hic expedita non autem vero ullam dolorem fugit eligendi dolorum. Dolore soluta voluptatum earum doloribus laborum commodi ipsa exercitationem temporibus quod, dolorem quam inventore, molestias blanditiis. Illum esse animi, fugiat eveniet rem magnam culpa, dicta error repellendus neque at omnis voluptatibus, deleniti dolor consectetur! Aut veniam nulla iste quam quo. Eum ullam dolor commodi cum quo vitae. Corrupti asperiores, est voluptates et ex beatae aut. Accusantium.
+        </div>
+    </div>
+    
+</body>
+</html>

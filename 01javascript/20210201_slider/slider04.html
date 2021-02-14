@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+    <style>
+        img {display: block; width: 500px;}
+        .wrapper {width: 500px; margin: 20px auto; height: 200px;}
+        .wrapper ul {width: 500px; height: 200px; position: relative; overflow: hidden;}
+        .wrapper ul li {position: absolute; left: 100%;}
+        .wrapper ul li:first-child {left:0}
+        .wrapper span {cursor: pointer;}
+        .wrapper .pager{padding: 10px 0;}
+        .wrapper .pager span {width: 15px; height: 15px; background: #0f0; border-radius: 50%; 
+            text-indent: -9999px; display: inline-block;}
+        .wrapper .pager span.active {background: red;}
+        .wrapper .pager span:hover {background: gray;}
+    </style>
+    <script>
+        $(function(){
+            let current = 0;
+            let banner = $(".wrapper li");
+            let banCount = banner.length;
+            let i;
+            let overBtn = false;
+            let pager = $(".pager span");
+            let viewTop = 0;
+
+            $(".next").click(function(){
+                if(overBtn==false){
+                    overBtn=true;
+                    i = current +1;
+                    if(i == banCount){
+                        i = 0;
+                        current = banCount -1;
+                    }
+                    slideView("next");
+                }
+            });
+            $(".prev").click(function(){
+                if(overBtn==false){
+                    overBtn=true;
+                    i = current -1;
+                    if(i == -1){
+                        current = 0;
+                        i = banCount -1;
+                    }
+                    slideView("prev");
+                }
+            });
+
+            function slideView(view){
+                let currentEl = banner.eq(current);
+                let nextEl = banner.eq(i);
+                pager.removeClass("active").eq(i).addClass("active");//pager color
+                if(view == "next"){
+                    // currentEl.css("left","0").stop().animate({left:"-100%"},1000);
+                    // nextEl.css("left","100%").stop().animate({left:0},1000,function(){overBtn=false});
+                    currentEl.css("left","0");
+                    nextEl.css({left:"100%","z-index":viewTop++}).stop().animate({left:0},1000,function(){overBtn=false});
+                }else{
+                    // currentEl.css("left","0").stop().animate({left:"100%"},1000);
+                    // nextEl.css("left","-100%").stop().animate({left:0},1000,function(){overBtn=false});
+                    currentEl.css("left","0");
+                    nextEl.css({left:"-100%","z-index":viewTop++}).stop().animate({left:0},1000,function(){overBtn=false});
+                }
+                current = i;
+            }
+
+            function trigger(){
+                $(".next").trigger("click");
+            }
+            setInterval(trigger,3000);
+            pager.click(function(){
+                i = $(this).index();
+                slideView("next");
+            });
+
+            $(window).mousewheel(function(event,delta){
+                if(delta<0){
+                    $(".next").trigger("click");
+                }else{
+                    $(".prev").trigger("click");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="../images/images01.jpg" alt="img01"></li>
+            <li><img src="../images/images02.jpg" alt="img02"></li>
+            <li><img src="../images/images03.jpg" alt="img03"></li>
+            <li><img src="../images/images04.jpg" alt="img04"></li>
+            <li><img src="../images/images05.jpg" alt="img05"></li>
+        </ul>
+        <div class="btn">
+            <span class="prev">이전</span>
+            <span class="next">이후</span>
+        </div>
+        <div class="pager">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
+    </div>
+</body>
+</html>
