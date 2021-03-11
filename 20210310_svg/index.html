@@ -1,45 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>svg</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <style>
-        body { background: skyblue;}
-        .svg { background-image: url(./star.svg); width: 200px; height: 200px; background-color: orange;}
-        .st0 { fill:#ED1C24; transition: 0.3s;}
-        .star1 path { stroke: yellow; stroke-width: 20; stroke-dasharray: 0%;
-            stroke-dashoffset: 10;}
-        .star1:hover .st0 { fill:#00ff00}
-        .star1 { width: 200px; height: 200px; background: blue;}
+        body{background:skyblue;}
+        .svg{
+        width: 300px;height: 300px;
+        background-image: url(star.svg);
+        background-color:orange;
+        }
+        .st0{
+        fill:#FF0000;transition:0.3s;
+        }
+
+        .star1 path{
+        fill:#fff;
+        stroke:#f0f;
+        stroke-width:20;
+        stroke-dasharray:2280;
+        stroke-dashoffset:2280
+
+        }
+        .star1:hover .st0{fill:#00ff00}
+        .star1{width: 200px;height: 200px;background:blue;}
     </style>
 </head>
 <body>
-    <!-- use img tag get svg -->
-    <img src="./star.svg" alt="">
-    <!-- use background-image get svg -->
+    <img src="star.svg" alt="">
     <div class="svg"></div>
-    <!-- use html get svg -->
     <div class="star1">
         <svg x="0" y="0" width="100%" height="100%" viewBox="0 0 500 500">
         <g>
-            <polygon class="st0" points="188.3,258.3 124.2,195.8 212.8,182.9 252.5,102.6 292.2,182.9 380.8,195.8 316.7,258.3 331.8,346.7 
-                252.5,305 173.2,346.7 	"/>
-            <path d="M252.5,103.7l39.1,79.2l0.2,0.5l0.5,0.1l87.4,12.7l-63.3,61.7l-0.4,0.4l0.1,0.5l14.9,87.1L253,304.7l-0.5-0.2l-0.5,0.2
-                l-78.2,41.1l14.9-87.1l0.1-0.5l-0.4-0.4l-63.3-61.7l87.4-12.7l0.5-0.1l0.2-0.5L252.5,103.7 M252.5,101.4l-40,81l-89.4,13l64.7,63.1
-                l-15.3,89.1l80-42l80,42l-15.3-89.1l64.7-63.1l-89.4-13L252.5,101.4L252.5,101.4z"/>
+            <polygon class="st0" points="193,283.7 100.7,216.6 214.8,216.6 250,108.2 285.2,216.6 399.3,216.6 307,283.7 342.3,392.1
+                250,325.1 157.7,392.1 	"/>
+            <path class="han"  d="M250,109.8l34.6,106.6l0.2,0.7h0.7h112.1L307,283l-0.6,0.4l0.2,0.7l34.6,106.6l-90.7-65.9l-0.6-0.4l-0.6,0.4l-90.7,65.9
+                l34.6-106.6l0.2-0.7L193,283l-90.7-65.9h112.1h0.7l0.2-0.7L250,109.8 M250,106.6l-35.6,109.6H99.2l93.2,67.7l-35.6,109.6l93.2-67.7
+                l93.2,67.7l-35.6-109.6l93.2-67.7H285.6L250,106.6L250,106.6z"/>
         </g>
         </svg>
     </div>
+
     <style>
-        .circle circle{ fill: #f0f; stroke: #000; }
-        
+        .circle{width: 100px;height: 100px;}
+        .circle  circle{
+            stroke:#000;
+            fill:#f0f;
+            stroke-width:5;
+            stroke-dasharray:2280;
+            stroke-dashoffset:2280;
+
+
+            animation-fill-mode:forwards;
+            animation-duration:3s;
+            animation-direction:alternate;
+        }
+
+        .circle:hover circle{
+            animation-name:ani;
+        }
+
+        @keyframes ani{
+            from{stroke-dashoffset:2280}
+            to{stroke-dashoffset:0}
+        }
+
     </style>
     <div class="circle">
-        <svg x="0" y="0" width="200" height="200" viewBox="0 0 200 200">
-            <circle cx="100" cy="100" r="45"></circle>
+        <svg x="0" y="0" width="100%" height="100%" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="45"></circle>
         </svg>
     </div>
+
 </body>
 </html>
